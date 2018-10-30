@@ -8,9 +8,9 @@ int main() {
   stat("yaboi.txt", s);
 
   printf("filename: yaboi.txt\n");
-  printf("file size: %lld bytes\n", s->st_size);
+  printf("file size: %ld bytes\n", s->st_size);
   printf("file mode: %o\n", s->st_mode);
   char date[36];
-  strftime(date, 36, "%M.%m.%Y %H"s->st_atime)
-  printf("time of last access: %s\n", strftime(s->st_atime);
+  strftime(date, 36, "%M.%m.%Y %H", localtime(&(s->st_atime)));
+  printf("time of last access: %s\n", date);
 }
