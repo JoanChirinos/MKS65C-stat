@@ -11,6 +11,6 @@ int main() {
   printf("file size: %ld bytes\n", s->st_size);
   printf("file mode: %o\n", s->st_mode);
   char date[36];
-  strftime(date, 36, "%M.%m.%Y %H", localtime(&(s->st_atime)));
+  strftime(date, 36, "%c", localtime(&(s->st_atime)));
   printf("time of last access: %s\n", date);
 }
